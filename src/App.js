@@ -5,6 +5,7 @@ import Navigation from './components/Navigation/Navigation';
 import Demographics from './components/Demographics/Demographics';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
+import Instructions from './components/Instructions/Instructions';
 import './App.css';
 
 const particlesOptions = {
@@ -137,16 +138,23 @@ class App extends Component {
             <FaceRecognition box={box} imageUrl={imageUrl} />
           </div>
           :
-          <div>
-            <h1>Demographics</h1>
-            <Logo />
-            <ImageLinkForm
-              onInputChange={this.onInputChange}
-              onButtonSubmit={() => this.onButtonSubmit('demographics')}
-              nodeServer={'demographics'}
-            />
-            <Demographics predictions={predictions} imageUrl={imageUrl} />
-          </div>
+          route === 'demo' ?
+            <div>
+              <h1>Demographics</h1>
+              <Logo />
+              <ImageLinkForm
+                onInputChange={this.onInputChange}
+                onButtonSubmit={() => this.onButtonSubmit('demographics')}
+                nodeServer={'demographics'}
+              />
+              <Demographics predictions={predictions} imageUrl={imageUrl} />
+            </div>
+            :
+            <div>
+              <h1>Instructions</h1>
+              <Logo />
+              <Instructions />
+            </div>
         }
       </div>
     );

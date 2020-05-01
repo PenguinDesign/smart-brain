@@ -6,8 +6,8 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit, nodeServer }) => {
     <div>
       <p className='white f3'>
         {nodeServer === 'imageurl' ?
-          'This Magic Brain detects faces in your pictures! Provide a link to your picture!' :
-          'This Magic Brain detects age, ethnic background, and gender! (1 person only)'}
+          'This Smart Brain detects faces in your pictures! Provide a link to your picture!' :
+          'This Smart Brain detects age, ethnic background, and gender! (1 person only)'}
       </p>
       <div className='center'>
         <div className='form center pa4 br3 shadow-5'>

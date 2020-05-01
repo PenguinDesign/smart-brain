@@ -1,5 +1,4 @@
 import React from 'react';
-import './Demographics.css';
 
 const Demographics = ({ imageUrl, predictions }) => {
   let ages = predictions.agePredictions.map(age => {
